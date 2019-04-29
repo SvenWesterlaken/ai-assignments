@@ -16,11 +16,14 @@ class SentimentCalculator(object):
 
     def calculate(self, tweetFileName, outputFileName = 'sentiment_scores.txt'):
         rf, of = src.getFiles(tweetFileName, outputFileName)
+        o_str = ""
 
         for line in rf:
             sentiment_score = numpy.sum([int(self.sentiment_scores.get(src.generalizeTerm(word), 0)) for word in json.loads(line)['text'].split()])
 
-            of.write(str(sentiment_score) + '\n')
+            o_str += str(sentiment_score) + '\n'
+
+        of.write(o_str)
 
         rf.close()
         of.close()

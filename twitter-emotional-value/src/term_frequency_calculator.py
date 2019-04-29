@@ -11,16 +11,25 @@ class TermFrequencyCalculator(object):
         rf, of = src.getFiles(tweetFileName, outputFileName)
 
         terms = {}
+        term_count = 0
+        o_str = ''
 
         for line in rf:
-            for w in word_tokenize(json.loads(line)['text'].lower()):
+            tweet = json.loads(line)
+            text = src.removeUrls(tweet['text'], tweet['entities']['urls'])
+
+            for w in text.split():
                 word = src.generalizeTerm(w)
 
-                if not word in self.stop_words:
+                if word and not word in self.stop_words:
+                    term_count += 1
+
                     if word in terms:
                         terms[word] = terms[word] + 1
                     else:
                         terms[word] = 1
 
         for word, freq in sorted(terms.items(), key=operator.itemgetter(1), reverse=True):
-            print(word + "\t → " + str(freq))
+            o_str += word + "\t" + str(freq / term_count) + "\n"
+
+        of.write(o_str)

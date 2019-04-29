@@ -1,0 +1,57 @@
+Zimbabwe	 6.0
+Italy	 5.0
+Russia	 4.0
+United States	 3.61
+Singapore	 3.05
+Belgium	 3.0
+Austria	 3.0
+Ireland	 2.25
+France	 2.01
+Ghana	 2.0
+Indonesia	 2.0
+New Zealand	 2.0
+China	 2.0
+Cambodia	 2.0
+Bangladesh	 1.88
+Brazil	 1.81
+Japan	 1.5
+Argentina	 1.12
+Nigeria	 1.0
+Sweden	 1.0
+Georgia	 1.0
+India	 0.74
+Estonia	 0.62
+Canada	 0.5
+Spain	 0.5
+Zambia	 0.5
+Venezuela	 0.5
+Poland	 0.5
+Thailand	 0.5
+United Kingdom	 0.45
+Colombia	 0.2
+Australia	 0.16
+Mexico	 0.0
+Turkmenistan	 0.0
+South Africa	 0.0
+Turkey	 0.0
+Barbados	 0.0
+Egypt	 0.0
+Sri Lanka	 0.0
+Malawi	 0.0
+Central African Republic	 0.0
+Philippines	 0.0
+Pakistan	 0.0
+Portugal	 0.0
+Isle of Man	 0.0
+Vietnam	 0.0
+Hungary	 0.0
+Ukraine	 0.0
+Germany	 -0.28
+Costa Rica	 -0.5
+Switzerland	 -0.69
+Netherlands	 -0.75
+Kenya	 -1.0
+Malaysia	 -1.0
+Hong Kong	 -1.0
+Qatar	 -1.0
+Vatican	 -2.0
