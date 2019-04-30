@@ -15,6 +15,11 @@ class HappiestOriginCalculator(object):
         # if the string is a country make sure it matches by converting to uppercase
         return str.upper() if len(str) == 2 else str
 
+    def formatSentiment(self, sentiment):
+        sm = str(round(float(sentiment), 2))
+
+        return '0.0' if sm == '-0.0' else sm
+
     def calculate(self, tweetFileName, sentimentFileName = 'sentiment_scores.txt', outputFileName = 'happiest_origins.txt'):
         rf, of = src.getFiles(tweetFileName, outputFileName)
         sf = src.getFile(sentimentFileName)
@@ -63,10 +68,16 @@ class HappiestOriginCalculator(object):
         countries = sorted(countries.items(), key=operator.itemgetter(1), reverse=True)
 
         for c, sm in countries:
-            o_str += c + "\t " + str(round(float(sm), 2)) + "\n"
+            o_str += c + "\t " + self.formatSentiment(sm) + "\n"
 
         of.write(o_str)
+
+        print('--------------------------------------------------------------')
+        print('The happiest country is:', countries[0][0])
+        print('--------------------------------------------------------------')
 
         rf.close()
         sf.close()
         of.close()
+
+        return countries[0]

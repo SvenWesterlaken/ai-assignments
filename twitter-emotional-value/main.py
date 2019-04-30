@@ -1,7 +1,7 @@
 import tweepy
 import auth as credentials
 import nltk
-from src import FileLogStreamListener, SentimentCalculator, TermFrequencyCalculator, HappiestOriginCalculator
+from src import FileLogStreamListener, SentimentCalculator, TermFrequencyCalculator, HappiestOriginCalculator, TopHashtagCalculator
 
 auth = tweepy.OAuthHandler(credentials.api_key, credentials.api_key_secret)
 auth.set_access_token(credentials.access_token, credentials.access_token_secret)
@@ -21,3 +21,6 @@ if __name__ == '__main__':
 
     happy_or_calc = HappiestOriginCalculator()
     happy_or_calc.calculate('output.txt')
+
+    hashtag_calc = TopHashtagCalculator()
+    hashtag_calc.calculate('output.txt')
