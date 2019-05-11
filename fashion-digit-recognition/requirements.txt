@@ -1,6 +1,0 @@
-image
-numpy
-tensorflow
-keras
-pyyaml
-matplotlib
