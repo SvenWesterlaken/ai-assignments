@@ -9,7 +9,7 @@ operators = {
 }
 
 def solve(nrs, goal):
-    """Solve the game using the breadth-first (uninformed) search algorithm"""
+    """Solve the game using the A* (informed) search algorithm"""
 
     it_numbers = enumerate(nrs)
 
