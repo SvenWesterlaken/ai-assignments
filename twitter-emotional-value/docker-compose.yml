@@ -2,7 +2,6 @@ version: "3.1"
 
 services:
   twitter-emotional-value:
-    image: svenwstrl/twitter-emotional-value
     build: .
     volumes:
       - .:/usr/src/app
