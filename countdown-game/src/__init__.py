@@ -1,1 +1,1 @@
-from . import number_gen, us_solver
+from . import number_gen, uninformed_solver, informed_solver
